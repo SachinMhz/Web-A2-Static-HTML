@@ -52,8 +52,13 @@
   float: right;
 }
 
+.profile-summary{
+  background-color: #F0F9FC;
+
+}
 .summary {
   width: 50%;
+  background-color: #F0F9FC;
 }
 
 .summary-title{
@@ -93,11 +98,15 @@
 
 .profile-picture-wrapper {
   width: 50%;
+  background-color: #F0F9FC;
 }
 
 .profile-picture {
-  width: 200px;
-  height: 200px;
+  height: 60vh;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .container {
