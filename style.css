@@ -52,35 +52,36 @@
   float: right;
 }
 
-.profile-summary{
+.profile-summary {
   background-color: #F0F9FC;
 
 }
+
 .summary {
   width: 50%;
   background-color: #F0F9FC;
 }
 
-.summary-title{
+.summary-title {
   margin-top: 40px;
   font-size: x-large;
   text-align: center;
 }
 
-.summary-sub-title{
+.summary-sub-title {
   font-style: italic;
   font-size: large;
   text-align: center;
   margin: 8px 0px;
 }
 
-.summary-description{
+.summary-description {
   font-size: medium;
   text-align: center;
   padding: 16px;
 }
 
-.resume-btn{
+.resume-btn {
   display: block;
   padding: 10px 16px;
   border-radius: 8px;
@@ -91,7 +92,7 @@
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-.resume-btn:hover{
+.resume-btn:hover {
   cursor: pointer;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -191,6 +192,52 @@ section h1 {
   margin: 8px 0px;
 }
 
+/*----- Experiences -----*/
+.experiences-wrapper {
+  margin-left: 16px;
+}
+
+.experience {
+  list-style-type: none;
+  border-left: 2px solid black;
+  padding: 4px 0px 12px 24px;
+  position: relative;
+}
+
+.experience-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  position: absolute;
+  top: 0px;
+  left: -14px;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.experience-date {
+  font-size: large;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.experience-company {
+  font-size: large;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.responsibilities {
+  padding: 12px 20px;
+  list-style-type: none;
+}
+
+.responsibility {
+
+  list-style-type: disc;
+
+}
+
 /*---- Blogs----*/
 .blogs-wrapper {
   margin-top: 12px;
@@ -240,7 +287,7 @@ section h1 {
   margin: 8px 0px;
 }
 
-.blog-btn{
+.blog-btn {
   padding: 10px 16px;
   border-radius: 8px;
   border: none;
@@ -248,7 +295,8 @@ section h1 {
   margin: auto;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
-.blog-btn:hover{
+
+.blog-btn:hover {
   cursor: pointer;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -263,6 +311,7 @@ section h1 {
   height: 50px;
   width: 65px;
 }
+
 /* https://fontawesome.com/icons/graduation-cap?f=classic&s=solid */
 .education-details {
   display: inline-block;
@@ -304,23 +353,25 @@ section h1 {
   border: 3px solid black;
 }
 
-.testimonial-user{
+.testimonial-user {
   margin-top: 40px;
   text-align: center;
   font-size: large;
   font-weight: 700;
 }
-.testimonial-level{
+
+.testimonial-level {
   font-style: italic;
   text-align: center;
   font-size: small;
 }
-.testimonial-message{
+
+.testimonial-message {
   margin-top: 12px;
 
 }
 
-.ml-4{
+.ml-4 {
   margin-left: 8px;
 }
 
@@ -329,21 +380,26 @@ section h1 {
   font-size: medium;
   font-weight: 600;
 }
-.sub-title{
+
+.sub-title {
   font-size: large;
   font-style: italic;
+  margin-left: 6px;
 }
-.social-icon{
+
+.social-icon {
   height: 24px;
   width: 24px;
   object-fit: cover;
   border-radius: 12px;
 }
-.social-icon:hover{
+
+.social-icon:hover {
   height: 32px;
   width: 32px;
   border-radius: 16px;
 }
+
 .socials-wrapper {
   list-style-type: none;
   height: 36px;
@@ -353,11 +409,12 @@ section h1 {
   display: inline-block;
   margin: 8px;
 }
-.contact-wrapper{
+
+.contact-wrapper {
   margin-top: 20px;
 }
 
-footer{
+footer {
   background-color: black;
   padding: 40px 100px;
   color: white;
