@@ -56,6 +56,41 @@
   width: 50%;
 }
 
+.summary-title{
+  margin-top: 40px;
+  font-size: x-large;
+  text-align: center;
+}
+
+.summary-sub-title{
+  font-style: italic;
+  font-size: large;
+  text-align: center;
+  margin: 8px 0px;
+}
+
+.summary-description{
+  font-size: medium;
+  text-align: center;
+  padding: 16px;
+}
+
+.resume-btn{
+  display: block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.resume-btn:hover{
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 .profile-picture-wrapper {
   width: 50%;
 }
@@ -196,13 +231,17 @@ section h1 {
   margin: 8px 0px;
 }
 
-.blog-btn {
-  padding: 8px;
-  border-radius: 4px;
+.blog-btn{
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  margin: auto;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
-
-.blog-btn:hover {
+.blog-btn:hover{
   cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 /*----Educations----*/
