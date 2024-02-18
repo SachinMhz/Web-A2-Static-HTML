@@ -1,10 +1,40 @@
 :root {
-  --color-primary-light: #3f6fa9ad;
+  --color-primary-light: #13a6b3;
+  ;
   --color-primary: #174175;
   --color-primary-dark: #0b2d57;
-  --color-secondary-light: #5fd5e09d;
-  --color-secondary: #13a6b3;
-  --color-secondary-dark: #095960;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.clear-fix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.half {
+  width: 50%;
+}
+
+.one-third {
+  width: 33.33%;
+}
+
+.container {
+  margin: auto;
+  padding: 12px 160px;
 }
 
 /* ---- Navigation Menu --- */
@@ -38,20 +68,7 @@
   color: var(--color-primary-light);
 }
 
-.clear-fix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.float-left {
-  float: left;
-}
-
-.float-right {
-  float: right;
-}
-
+/* ------ Personal Detail and Image ------*/
 .profile-summary {
   background-color: #c6dbe2;
 }
@@ -84,6 +101,8 @@
   display: block;
   padding: 10px 16px;
   border-radius: 8px;
+  background-color: var(--color-primary-dark);
+  color: white;
   border: none;
   text-align: center;
   margin: auto;
@@ -94,6 +113,8 @@
 .resume-btn:hover {
   cursor: pointer;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: var(--color-primary-light);
+  color: black;
 }
 
 .profile-picture-wrapper {
@@ -109,28 +130,7 @@
   border-radius: 8px;
 }
 
-.container {
-  margin: auto;
-  padding: 12px 160px;
-}
-
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
-.half {
-  width: 50%;
-}
-
-.one-third {
-  width: 33.33%;
-}
-
-.skill-wrapper {
-  margin: 12px 20px 0px 0px;
-}
-
+/* ---- Skills-----*/
 .skills {
   margin-top: 20px;
 }
@@ -138,6 +138,11 @@
 .skills h1 {
   margin-bottom: 16px;
 }
+
+.skill-wrapper {
+  margin: 16px 20px 0px 0px;
+}
+
 
 .skill-outer-fill {
   margin: 4px 0px;
@@ -200,6 +205,7 @@ section h1 {
 
 .project-img {
   width: 100%;
+  height: 180px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -212,6 +218,14 @@ section h1 {
 }
 
 /*----- Experiences -----*/
+.experiences {
+  margin-top: 20px;
+}
+
+.experiences h1 {
+  margin-bottom: 16px;
+}
+
 .experiences-wrapper {
   margin-left: 16px;
 }
@@ -256,6 +270,14 @@ section h1 {
 }
 
 /*---- Blogs----*/
+.blogs {
+  margin-top: 20px;
+}
+
+.blogs h1 {
+  margin-bottom: 16px;
+}
+
 .blogs-wrapper {
   margin-top: 12px;
 }
@@ -311,22 +333,34 @@ section h1 {
   text-align: center;
   margin: auto;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  background-color: var(--color-primary-dark);
+  color: white;
 }
 
 .blog-btn:hover {
   cursor: pointer;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: var(--color-primary-light);
+  color: black;
 }
 
 /*----Educations----*/
+.educations {
+  margin-top: 20px;
+}
+
+.educations h1 {
+  margin-bottom: 16px;
+}
+
 .education {
   margin-top: 20px;
 }
 
 .education-img {
   display: inline-block;
-  height: 50px;
-  width: 65px;
+  height: 40px;
+  width: 50px;
 }
 
 /* https://fontawesome.com/icons/graduation-cap?f=classic&s=solid */
@@ -349,6 +383,14 @@ section h1 {
 }
 
 /*--- Testimonials----*/
+.testimonials {
+  margin-top: 20px;
+}
+
+.testimonials h1 {
+  margin-bottom: 16px;
+}
+
 .testimonial {
   display: inline-block;
   border: 2px solid black;
@@ -387,8 +429,13 @@ section h1 {
   margin-top: 12px;
 }
 
-.ml-4 {
-  margin-left: 8px;
+/*----- Contact-----*/
+.contacts {
+  margin-top: 20px;
+}
+
+.contacts h1 {
+  margin-bottom: 16px;
 }
 
 .contact-title {
@@ -482,15 +529,21 @@ textarea {
   text-align: center;
   margin-top: 20px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  background-color: var(--color-primary-dark);
+  color: white;
 }
 
 .form-btn:hover {
   cursor: pointer;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: var(--color-primary-light);
+  color: black;
 }
 
+/*------Footer-----*/
+
 footer {
-  background-color: black;
+  background-color: var(--color-primary-dark);
   padding: 40px 170px;
   color: white;
 }
@@ -507,12 +560,13 @@ footer {
 }
 
 .footer-right-title {
-  font-size: large;
+  font-size: 20px;
   margin-bottom: 12px;
 }
 
 .footer-list {
   margin-right: 12px;
+  list-style-type: none;
 }
 
 .footer-list-item {
@@ -520,6 +574,6 @@ footer {
 }
 
 .footer-list-item:hover {
-  color: aquamarine;
+  color: var(--color-primary-light);
   cursor: pointer;
 }
