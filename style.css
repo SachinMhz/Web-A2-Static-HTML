@@ -63,14 +63,14 @@
 }
 
 .summary-title {
-  margin-top: 40px;
-  font-size: x-large;
+  margin-top: 100px;
+  font-size: 48px;
   text-align: center;
 }
 
 .summary-sub-title {
   font-style: italic;
-  font-size: large;
+  font-size: 32px;
   text-align: center;
   margin: 8px 0px;
 }
@@ -112,9 +112,8 @@
 
 .container {
   margin: auto;
-  padding: 12px 100px;
+  padding: 12px 160px;
   margin-top: 8px;
-  /* border: 1px solid red; */
 }
 
 * {
@@ -177,6 +176,12 @@ section h1 {
   margin: 4px;
   padding: 12px;
   height: 380px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.project-wrapper:hover{
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .project-img {
@@ -376,7 +381,7 @@ section h1 {
 }
 
 .contact-title {
-  margin: 6px 0px;
+  margin-top: 20px;
   font-size: medium;
   font-weight: 600;
 }
@@ -385,6 +390,7 @@ section h1 {
   font-size: large;
   font-style: italic;
   margin-left: 6px;
+  margin: 8px;
 }
 
 .social-icon {
@@ -392,12 +398,13 @@ section h1 {
   width: 24px;
   object-fit: cover;
   border-radius: 12px;
+  box-shadow: 1px 1px 2px rgba(98, 97, 97, 0.4);
+
 }
 
 .social-icon:hover {
-  height: 32px;
-  width: 32px;
-  border-radius: 16px;
+  box-shadow: 4px 4px 8px rgba(98, 97, 97, 0.4);
+  cursor: pointer;
 }
 
 .socials-wrapper {
@@ -411,11 +418,85 @@ section h1 {
 }
 
 .contact-wrapper {
+  margin: 24px 0px;
+}
+.contact-details{
+  margin-top: 36px;
+  margin-left: 24px;
+}
+.contact-form-wrapper{
+  margin: 0px 40px;
+}
+.input-wrapper{
+  position: relative;
+  margin-bottom: 16px;
+}
+.form-icon{
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  position: absolute;
+  top: 12px;
+  left: 8px;
+}
+input{
+  height: 32px;
+  width: 90%;
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(238, 229, 229);
+  padding: 8px 40px;
+}
+textarea{
+  height: 100px;
+  width: 90%;
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(238, 229, 229);
+  padding: 16px 40px;
+}
+.form-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  margin-left: 16px;
+  border-radius: 16px;
+  border: none;
+  text-align: center;
   margin-top: 20px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+.form-btn:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 footer {
   background-color: black;
-  padding: 40px 100px;
+  padding: 40px 170px;
   color: white;
+}
+
+.footer-desc{
+  margin: 16px 0px;
+  padding-right: 32px;
+}
+.footer-right-list{
+  float: left;
+  margin-right:20px;
+  margin-top: 0px;
+}
+.footer-right-title{
+  font-size: large;
+  margin-bottom: 12px;
+}
+.footer-list{
+  margin-right: 12px;
+}
+.footer-list-item{
+  margin-top: 8px;
+}
+.footer-list-item:hover{
+  color: aquamarine;
+  cursor: pointer;
 }

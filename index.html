@@ -50,13 +50,13 @@
           <div class="skill-wrapper">
             <p>React JS</p>
             <div class="skill-outer-fill">
-              <div class="skill-inner-fill width-80"></div>
+              <div class="skill-inner-fill width-90"></div>
             </div>
           </div>
           <div class="skill-wrapper">
             <p>SQL</p>
             <div class="skill-outer-fill">
-              <div class="skill-inner-fill width-90"></div>
+              <div class="skill-inner-fill width-80"></div>
             </div>
           </div>
         </div>
@@ -70,13 +70,13 @@
           <div class="skill-wrapper">
             <p>JavaScript</p>
             <div class="skill-outer-fill">
-              <div class="skill-inner-fill width-90"></div>
+              <div class="skill-inner-fill width-70"></div>
             </div>
           </div>
           <div class="skill-wrapper">
             <p>Python</p>
             <div class="skill-outer-fill">
-              <div class="skill-inner-fill width-70"></div>
+              <div class="skill-inner-fill width-80"></div>
             </div>
           </div>
         </div>
@@ -402,71 +402,122 @@
         <div class="float-right half">
           <div class="contact-form-wrapper">
             <form action="#" method="post">
-              <p>
-                <label for="full_name">Full Name:</label><br />
-                <input type="text" id="full_name" name="full_name" required />
+              <p class="input-wrapper">
+                <img
+                  class="form-icon"
+                  src="images/person.png"
+                  alt="User icon for Form"
+                />
+                <input
+                  type="text"
+                  id="full_name"
+                  name="full_name"
+                  required
+                  placeholder="Your Name"
+                />
               </p>
-              <p>
-                <label for="email">Email:</label><br />
-                <input type="email" id="email" name="email" required />
+              <p class="input-wrapper">
+                <img
+                  class="form-icon"
+                  src="images/mail.png"
+                  alt="Email icon for Form"
+                />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Your Email"
+                />
               </p>
-              <p>
-                <label for="content_body">Content Body:</label><br />
+              <p class="input-wrapper">
+                <img
+                  class="form-icon"
+                  src="images/message.png"
+                  alt="Message icon for Form"
+                />
                 <textarea
                   id="content_body"
                   name="content_body"
                   rows="4"
+                  placeholder="Type Your Message here."
                   required
                 ></textarea>
               </p>
-              <p>
-                <button type="submit">Send Message</button>
+              <p class="form-btn-wrapper">
+                <button class="form-btn" type="submit">Send Message</button>
               </p>
             </form>
           </div>
         </div>
       </div>
     </section>
-    <footer>
-      <div class="footer-left">
+    <footer class="clear-fix">
+      <div class="half float-left">
         <div class="footer-title">
           <h2>Portfolio</h2>
-          <p>
+          <p class="footer-desc">
             Lorem ipsum dolor sit amet, cons ectetur adipis icing elit, sed do
-            eius mod tempor i
+            eius mod tempor ieius mod tempor ieius mod tempor i
           </p>
-          <ul class="socials-wrapper">
-            <li class="social-icon-wrapper">
-              <a>
-                <img
-                  class="social-icon"
-                  src="images/instagam.png"
-                  alt="Facebook icon"
-                />
-              </a>
-            </li>
-            <li class="social-icon-wrapper">
-              <a>
-                <img
-                  class="social-icon"
-                  src="images/linkedin.png"
-                  alt="Linked In icon"
-                />
-              </a>
-            </li>
-            <li class="social-icon-wrapper">
-              <a>
-                <img
-                  class="social-icon"
-                  src="images/github.png"
-                  alt="Github icon"
-                />
-              </a>
-            </li>
+        </div>
+        <ul class="socials-wrapper">
+          <li class="social-icon-wrapper">
+            <a>
+              <img
+                class="social-icon"
+                src="images/instagam.png"
+                alt="Facebook icon"
+              />
+            </a>
+          </li>
+          <li class="social-icon-wrapper">
+            <a>
+              <img
+                class="social-icon"
+                src="images/linkedin.png"
+                alt="Linked In icon"
+              />
+            </a>
+          </li>
+          <li class="social-icon-wrapper">
+            <a>
+              <img
+                class="social-icon"
+                src="images/github.png"
+                alt="Github icon"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="half float-right">
+        <div class="footer-right-list">
+          <div class="footer-right-title">Projects</div>
+          <ul class="footer-list">
+            <li class="footer-list-item">Weather App</li>
+            <li class="footer-list-item">Task Manager App</li>
+            <li class="footer-list-item">Library Management System</li>
+            <li class="footer-list-item">Chatbot For FAQ</li>
+          </ul>
+        </div>
+        <div class="footer-right-list">
+          <div class="footer-right-title">Blogs</div>
+          <ul class="footer-list">
+            <li class="footer-list-item">Mastering Data Structures</li>
+            <li class="footer-list-item">Building Scalable Web Applications</li>
+            <li class="footer-list-item">Basic of Android Development</li>
+          </ul>
+        </div>
+        <div class="footer-right-list">
+          <div class="footer-right-title">Company</div>
+          <ul class="footer-list">
+            <li class="footer-list-item">About Us</li>
+            <li class="footer-list-item">Contact Me</li>
+            <li class="footer-list-item">Rate Us</li>
           </ul>
         </div>
       </div>
-      <div class="footer-right">Todo</div>
     </footer>
   </body>
 </html>
