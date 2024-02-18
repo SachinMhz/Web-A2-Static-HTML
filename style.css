@@ -1,16 +1,16 @@
 :root {
-  --color-primary: red;
-  --color-secondary: blue;
-  --color-primary-light: red;
-  --color-secondary-light: blue;
-  --color-primary-dark: red;
-  --color-secondary-dark: blue;
+  --color-primary-light: #3f6fa9ad;
+  --color-primary: #174175;
+  --color-primary-dark: #0b2d57;
+  --color-secondary-light: #5fd5e09d;
+  --color-secondary: #13a6b3;
+  --color-secondary-dark: #095960;
 }
 
 /* ---- Navigation Menu --- */
 .nav-list {
   list-style-type: none;
-  background-color: #333;
+  background-color: var(--color-primary-dark);
   padding: 0;
   margin: 0;
   text-align: center;
@@ -18,24 +18,24 @@
 
 .nav-list li {
   display: inline-block;
-  /* border: 1px solid red; */
-  height: 40px;
+  height: 60px;
   text-align: center;
-  line-height: 40px;
+  line-height: 60px;
   margin: auto;
 }
 
 .nav-list li:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 .nav-list li a {
   color: white;
   text-decoration: none;
+  font-size: large;
 }
 
 .nav-list li a:hover {
-  background-color: #555;
+  color: var(--color-primary-light);
 }
 
 .clear-fix::after {
@@ -53,13 +53,12 @@
 }
 
 .profile-summary {
-  background-color: #F0F9FC;
-
+  background-color: #c6dbe2;
 }
 
 .summary {
   width: 50%;
-  background-color: #F0F9FC;
+  background-color: #c6dbe2;
 }
 
 .summary-title {
@@ -99,11 +98,11 @@
 
 .profile-picture-wrapper {
   width: 50%;
-  background-color: #F0F9FC;
+  background-color: #c6dbe2;
 }
 
 .profile-picture {
-  height: 60vh;
+  height: 64vh;
   display: block;
   margin: auto;
   object-fit: cover;
@@ -113,7 +112,6 @@
 .container {
   margin: auto;
   padding: 12px 160px;
-  margin-top: 8px;
 }
 
 * {
@@ -133,17 +131,25 @@
   margin: 12px 20px 0px 0px;
 }
 
+.skills {
+  margin-top: 20px;
+}
+
+.skills h1 {
+  margin-bottom: 16px;
+}
+
 .skill-outer-fill {
   margin: 4px 0px;
   height: 16px;
-  border: 1px solid green;
+  border: 1px solid var(--color-primary-dark);
   border-radius: 4px;
 }
 
 .skill-inner-fill {
   height: 15px;
-  background-color: green;
-  border: 1px solid green;
+  background-color: var(--color-primary-dark);
+  border: 1px solid var(--color-primary-dark);
   border-radius: 4px;
 }
 
@@ -170,6 +176,14 @@ section h1 {
 }
 
 /* ---- Projects ----- */
+.projects {
+  margin-top: 20px;
+}
+
+.projects h1 {
+  margin-bottom: 24px;
+}
+
 .project-wrapper {
   border-radius: 12px;
   border: 1px dotted black;
@@ -179,7 +193,7 @@ section h1 {
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-.project-wrapper:hover{
+.project-wrapper:hover {
   cursor: pointer;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -238,9 +252,7 @@ section h1 {
 }
 
 .responsibility {
-
   list-style-type: disc;
-
 }
 
 /*---- Blogs----*/
@@ -373,7 +385,6 @@ section h1 {
 
 .testimonial-message {
   margin-top: 12px;
-
 }
 
 .ml-4 {
@@ -399,7 +410,6 @@ section h1 {
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 1px 1px 2px rgba(98, 97, 97, 0.4);
-
 }
 
 .social-icon:hover {
@@ -420,18 +430,22 @@ section h1 {
 .contact-wrapper {
   margin: 24px 0px;
 }
-.contact-details{
+
+.contact-details {
   margin-top: 36px;
   margin-left: 24px;
 }
-.contact-form-wrapper{
+
+.contact-form-wrapper {
   margin: 0px 40px;
 }
-.input-wrapper{
+
+.input-wrapper {
   position: relative;
   margin-bottom: 16px;
 }
-.form-icon{
+
+.form-icon {
   width: 24px;
   height: 24px;
   object-fit: cover;
@@ -439,7 +453,8 @@ section h1 {
   top: 12px;
   left: 8px;
 }
-input{
+
+input {
   height: 32px;
   width: 90%;
   border-radius: 4px;
@@ -447,7 +462,8 @@ input{
   background-color: rgb(238, 229, 229);
   padding: 8px 40px;
 }
-textarea{
+
+textarea {
   height: 100px;
   width: 90%;
   border-radius: 4px;
@@ -455,6 +471,7 @@ textarea{
   background-color: rgb(238, 229, 229);
   padding: 16px 40px;
 }
+
 .form-btn {
   display: block;
   width: 100%;
@@ -466,6 +483,7 @@ textarea{
   margin-top: 20px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
+
 .form-btn:hover {
   cursor: pointer;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
@@ -477,26 +495,31 @@ footer {
   color: white;
 }
 
-.footer-desc{
+.footer-desc {
   margin: 16px 0px;
   padding-right: 32px;
 }
-.footer-right-list{
+
+.footer-right-list {
   float: left;
-  margin-right:20px;
+  margin-right: 20px;
   margin-top: 0px;
 }
-.footer-right-title{
+
+.footer-right-title {
   font-size: large;
   margin-bottom: 12px;
 }
-.footer-list{
+
+.footer-list {
   margin-right: 12px;
 }
-.footer-list-item{
+
+.footer-list-item {
   margin-top: 8px;
 }
-.footer-list-item:hover{
+
+.footer-list-item:hover {
   color: aquamarine;
   cursor: pointer;
 }
