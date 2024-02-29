@@ -72,6 +72,7 @@
 .summary-description {
   font-size: medium;
   text-align: center;
+  line-height: 20px;
   padding: 16px;
 }
 
@@ -524,6 +525,11 @@ section h1 {
 
 .contact-details {
   grid-area: contact-details;
+  margin-top: 36px;
+  margin-left: 24px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-bottom: 60px;
 }
 
 .contact-form-wrapper {
@@ -568,14 +574,6 @@ section h1 {
 
 .contact-wrapper {
   margin: 24px 0px;
-}
-
-.contact-details {
-  margin-top: 36px;
-  margin-left: 24px;
-  display: inline-block;
-  vertical-align: bottom;
-  margin-bottom: 60px;
 }
 
 .contact-form-wrapper {
@@ -639,7 +637,7 @@ textarea {
 
 footer {
   display: grid;
-  grid-template-columns: 3fr 1.2fr 1.2fr .6fr;
+  grid-template-columns: 3fr 1.2fr 1.2fr 0.6fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "f-title f-project f-blog f-company"
@@ -703,4 +701,225 @@ footer {
 .footer-list-item:hover {
   color: var(--color-primary-light);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .profile-picture,
+  .profile-summary {
+    height: 54vh;
+  }
+
+  .container {
+    padding: 12px 120px;
+  }
+
+  .summary-title {
+    margin-top: 72px;
+    font-size: 36px;
+  }
+
+  .summary-sub-title {
+    font-size: 24px;
+  }
+
+  .summary-description {
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .resume-btn {
+    margin-top: 8px;
+  }
+
+  footer {
+    padding: 36px 120px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    padding: 12px 68px;
+  }
+
+  .summary-title {
+    margin-top: 40px;
+  }
+
+  .nav-list li {
+    padding: 20px 32px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1.9fr 1.9fr;
+    grid-template-areas:
+      "projects-title projects-title"
+      "project-1 project-2"
+      "project-3 project-4";
+    gap: 1rem;
+  }
+
+  footer {
+    padding: 36px 68px;
+    grid-template-rows: 1fr 0.5fr;
+    gap: 0.1rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    padding: 12px 40px;
+  }
+
+  .profile-picture,
+  .profile-summary {
+    height: 32vh;
+  }
+
+  .summary-title {
+    margin-top: 60px;
+  }
+
+  .nav-list li {
+    padding: 20px;
+  }
+
+  .profile-picture-wrapper {
+    margin-left: 0px;
+  }
+
+  .summary-description {
+    display: none;
+  }
+
+  .projects {
+    gap: 0.5rem;
+  }
+
+  .blogs {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.9fr 1.9fr;
+    grid-template-areas:
+      "blogs-title"
+      "blog-1"
+      "blog-2";
+    gap: 1rem;
+  }
+
+  .educations {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.9fr 1.9fr;
+    grid-template-areas:
+      "educations-title"
+      "education-1"
+      "education-2";
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .educations-title {
+    margin-bottom: 0px;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1.9fr 1.9fr 1.9fr;
+    grid-template-areas:
+      "testimonials-title"
+      "testimonial-1"
+      "testimonial-2"
+      "testimonial-3";
+    gap: 0.5rem;
+  }
+
+  footer {
+    padding: 24px 40px;
+    gap: 0rem;
+  }
+
+  .footer-right-title {
+    font-size: 16px;
+  }
+
+  .footer-list-item {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 12px;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.9fr 1.9fr;
+    grid-template-areas:
+      "skills-title"
+      "skills-left"
+      "skills-right";
+    gap: 1rem;
+  }
+
+
+  .projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.95fr 1.95fr 1.95fr 1.95fr;
+    grid-template-areas:
+      "projects-title"
+      "project-1"
+      "project-2"
+      "project-3"
+      "project-4";
+    gap: 1rem;
+  }
+
+  .educations-title {
+    margin-bottom: 0px;
+  }
+
+  .contacts {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.9fr 1.9fr;
+    grid-template-areas:
+      "contacts-title"
+      "contact-details"
+      "contact-form";
+  }
+
+  .contact-details {
+    margin: 12px;
+  }
+
+  .contact-title, .sub-title {
+    text-align: center;
+  }
+
+  .socials-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer {
+    padding: 24px 40px;
+    gap: 0rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr .1fr 1.2fr 1.2fr 1.1fr;
+    grid-template-areas:
+      "f-title"
+      "f-social"
+      "f-project"
+      "f-blog"
+      "f-company";
+    grid-gap: 1rem;
+  }
+
+  .footer-right-title {
+    font-size: 16px;
+  }
+
+  .footer-list-item {
+    font-size: 14px;
+  }
 }
