@@ -78,6 +78,10 @@
 .summary {
   background-color: #c6dbe2;
   vertical-align: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .summary-title {
@@ -138,17 +142,16 @@
   display: grid;
   /* Using the grid for 2 Dimentional */
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.2fr 1.8fr;
+  grid-template-rows: 0.1fr 1.9fr;
   grid-template-areas:
     "skills-title skills-title"
     "skills-left skills-right";
-  gap: 0.5rem;
+  gap: 1rem;
   margin-top: 20px;
 }
 
 .skills-title {
   grid-area: skills-title;
-  margin-bottom: 16px;
   text-align: center;
 }
 
@@ -766,7 +769,7 @@ footer {
   }
 
   .summary-title {
-    margin-top: 40px;
+    margin-top: 64px;
   }
 
   .nav-list li {
@@ -800,7 +803,7 @@ footer {
   }
 
   .summary-title {
-    margin-top: 60px;
+    margin-top: 20px;
   }
 
   .nav-list li {
