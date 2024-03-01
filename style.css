@@ -41,7 +41,8 @@
 
 /* ------ Personal Detail and Image ------*/
 .profile-summary {
-  display: flex; /* Using the flex for One dimentional */
+  display: flex;
+  /* Using the flex for One dimentional */
   background-color: #c6dbe2;
   height: 63vh;
 }
@@ -111,7 +112,8 @@
 
 /* ---- Skills-----*/
 .skills {
-  display: grid; /* Using the grid for 2 Dimentional */
+  display: grid;
+  /* Using the grid for 2 Dimentional */
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.2fr 1.8fr;
   grid-template-areas:
@@ -136,7 +138,7 @@
 }
 
 .skill-wrapper {
-  margin: 16px 20px 0px 0px;
+  margin-top: 16px;
 }
 
 .skill-outer-fill {
@@ -704,6 +706,7 @@ footer {
 }
 
 @media only screen and (max-width: 1200px) {
+
   .profile-picture,
   .profile-summary {
     height: 54vh;
@@ -850,6 +853,30 @@ footer {
 @media only screen and (max-width: 600px) {
   .container {
     padding: 12px;
+    margin-top: 0px;
+  }
+
+  .profile-summary {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .summary {
+    margin-bottom: 0px;
+    padding: 40px;
+  }
+
+  .summary-title {
+    margin: 0px;
+  }
+
+  .profile-summary {
+    height: auto;
+  }
+
+  .profile-picture {
+    height: 32vh;
   }
 
   .skills {
@@ -859,20 +886,36 @@ footer {
       "skills-title"
       "skills-left"
       "skills-right";
-    gap: 1rem;
+    gap: 0rem;
   }
 
+  .skills-title {
+    margin-bottom: 0px;
+    margin-top: 12px;
+  }
 
   .projects {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1.95fr 1.95fr 1.95fr 1.95fr;
+    grid-template-rows: auto;
     grid-template-areas:
       "projects-title"
       "project-1"
       "project-2"
       "project-3"
       "project-4";
-    gap: 1rem;
+    gap: 0.5rem;
+  }
+
+  .projects-title {
+    margin-bottom: 0px;
+  }
+
+  .projects h1 {
+    margin-bottom: 0px;
+  }
+
+  .educations {
+    gap: 0rem;
   }
 
   .educations-title {
@@ -881,31 +924,37 @@ footer {
 
   .contacts {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1.9fr 1.9fr;
+    grid-template-rows: auto;
     grid-template-areas:
       "contacts-title"
       "contact-details"
       "contact-form";
+    gap: 0rem;
   }
 
   .contact-details {
-    margin: 12px;
+    margin: 0px 0px 24px 0px;
   }
 
-  .contact-title, .sub-title {
+  .contact-title,
+  .sub-title {
     text-align: center;
   }
 
-  .socials-wrapper{
+  .contacts-title {
+    margin-bottom: 4px;
+  }
+
+  .socials-wrapper {
     display: flex;
     justify-content: center;
   }
-  
+
   footer {
     padding: 24px 40px;
     gap: 0rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr .1fr 1.2fr 1.2fr 1.1fr;
+    grid-template-rows: 0.5fr 0.1fr auto auto auto;
     grid-template-areas:
       "f-title"
       "f-social"
@@ -913,6 +962,18 @@ footer {
       "f-blog"
       "f-company";
     grid-gap: 1rem;
+  }
+
+  footer .socials-wrapper {
+    justify-content: start;
+  }
+
+  .footer-desc {
+    margin-bottom: 0px;
+  }
+
+  .footer-title {
+    margin-bottom: 0px;
   }
 
   .footer-right-title {
