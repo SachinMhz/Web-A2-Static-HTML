@@ -39,12 +39,36 @@
   color: var(--color-primary-light);
 }
 
+.mobile-nav {
+  display: none;
+  justify-items: flex-end;
+  align-items: flex-end;
+  padding: 12px;
+  background-color: var(--color-primary-dark);
+}
+
+.nav-list.display-flex{
+  display: flex;
+}
+
+.nav-menu {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.nav-menu:hover {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  padding: 0px;
+}
+
 /* ------ Personal Detail and Image ------*/
 .profile-summary {
   display: flex;
   /* Using the flex for One dimentional */
   background-color: #c6dbe2;
-  height: 63vh;
 }
 
 .profile-picture-wrapper {
@@ -53,7 +77,6 @@
 
 .summary {
   background-color: #c6dbe2;
-  margin-bottom: 120px;
   vertical-align: bottom;
 }
 
@@ -640,7 +663,7 @@ textarea {
 footer {
   display: grid;
   grid-template-columns: 3fr 1.2fr 1.2fr 0.6fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1.5fr .5fr;
   grid-template-areas:
     "f-title f-project f-blog f-company"
     "f-social f-project f-blog f-company";
@@ -706,9 +729,7 @@ footer {
 }
 
 @media only screen and (max-width: 1200px) {
-
-  .profile-picture,
-  .profile-summary {
+  .profile-picture {
     height: 54vh;
   }
 
@@ -774,8 +795,7 @@ footer {
     padding: 12px 40px;
   }
 
-  .profile-picture,
-  .profile-summary {
+  .profile-picture {
     height: 32vh;
   }
 
@@ -854,6 +874,19 @@ footer {
   .container {
     padding: 12px;
     margin-top: 0px;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-list li {
+    padding: 12px 48px;
+  }
+
+  .mobile-nav {
+    display: flex;
   }
 
   .profile-summary {

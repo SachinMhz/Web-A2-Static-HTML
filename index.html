@@ -9,6 +9,9 @@
 
   <body>
     <nav>
+      <div class="mobile-nav">
+        <img class="nav-menu" src="./images/menu.png" alt="Hamburger menu" />
+      </div>
       <ul class="nav-list">
         <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -481,5 +484,17 @@
         </ul>
       </div>
     </footer>
+
+    <script>
+      document.querySelector(".nav-menu").addEventListener("click", () => {
+        let navList = document.querySelector(".nav-list");
+
+        if (navList.className === "nav-list") {
+          navList.className += " display-flex";
+        } else {
+          navList.className = "nav-list";
+        }
+      });
+    </script>
   </body>
 </html>
