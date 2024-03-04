@@ -11,7 +11,7 @@
 
 .container {
   margin: auto;
-  padding: 0px 120px;
+  padding: 20px 120px;
 }
 
 /* Remove this later */
@@ -90,6 +90,48 @@ nav {
 }
 
 /*--------------------------------------------------*/
+/* ---------------- Releases----------------------- */
+/*--------------------------------------------------*/
+
+#releases {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "papers nobels patents";
+  gap: 1rem;
+}
+
+.scientific-paper {
+  grid-area: papers;
+}
+
+.nobel-nomination {
+  grid-area: nobels;
+}
+.patent {
+  grid-area: patents;
+}
+#releases div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 24px;
+  color: white;
+  background-color: black;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+.release-count {
+  font-size: 48px;
+  font-weight: bold;
+}
+.release-heading {
+  margin-top: 8px;
+  font-size: 28px;
+  font-weight: bold;
+}
+/*--------------------------------------------------*/
 /* ---------------- Paper Published --------------- */
 /*--------------------------------------------------*/
 
@@ -104,7 +146,6 @@ nav {
     "paper-4 paper-1 paper-1"
     "paper-5 paper-1 paper-1";
   gap: 1rem;
-  margin-top: 100px;
 }
 
 #papers h1 {
@@ -194,11 +235,11 @@ nav {
   margin: 16px 0px;
 }
 
-.paper-desc{
+.paper-desc {
   font-size: medium;
 }
 
-.paper-btns{
+.paper-btns {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -224,18 +265,100 @@ nav {
   color: black;
 }
 
-.paper-publish-wrapper{
+.paper-publish-wrapper {
   display: flex;
   align-items: center;
   justify-content: left;
   margin: 12px 0px;
 }
-.calendar-icon-wrapper{
+.calendar-icon-wrapper {
   margin-right: 12px;
   padding-top: 4px;
 }
-.calendar-icon{
+.calendar-icon {
   width: 32px;
   height: 32px;
   object-fit: cover;
+}
+
+/*--------------------------------------------------*/
+/* -------------------Hobbies---------------------- */
+/*--------------------------------------------------*/
+#hobbies {
+  display: grid;
+  grid-template-columns: 0.8fr 0.2fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  grid-template-areas:
+    "h-title h-title"
+    "h-wrapper h-count";
+  gap: 1rem;
+}
+
+.hobbies-title {
+  grid-area: h-title;
+}
+
+.hobbies-count-wrapper {
+  grid-area: h-count;
+}
+
+.hobbies-wrapper {
+  grid-area: h-wrapper;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  border: 1px solid black;
+  border-radius: 48px;
+  padding: 16px;
+}
+.hobby-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hobby-icon-wrapper {
+  border-radius: 60px;
+  border: 2px solid black;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.hobby-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.hobbies-count-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hobby-count {
+  font-size: 120px;
+  font-weight: bold;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  padding: 12px;
+  border: 3px solid black;
+  border-radius: 100px;
+}
+
+.hobby-count-label {
+  margin-top: 8px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
 }
