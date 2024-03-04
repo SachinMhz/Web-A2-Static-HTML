@@ -1,0 +1,241 @@
+:root {
+  --color-primary-light: #13a6b3;
+  --color-primary: #174175;
+  --color-primary-dark: #0b2d57;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  margin: auto;
+  padding: 0px 120px;
+}
+
+/* Remove this later */
+img {
+  width: 100px;
+  height: 100px;
+}
+
+/*--------------------------------------------------*/
+/* ---------------- Navigation Menu --------------- */
+/*--------------------------------------------------*/
+nav {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+}
+
+.nav-list {
+  list-style-type: none;
+  background-color: var(--color-primary-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list li {
+  padding: 16px 28px;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-list li a:hover {
+  color: var(--color-primary-light);
+}
+
+.mobile-nav {
+  display: none;
+  justify-items: flex-end;
+  align-items: flex-end;
+  padding: 12px;
+  background-color: var(--color-primary-dark);
+}
+
+.nav-list.display-flex {
+  display: flex;
+}
+
+.nav-menu {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.nav-menu:hover {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  padding: 0px;
+}
+
+/*--------------------------------------------------*/
+/* ---------------- Profile Summary --------------- */
+/*--------------------------------------------------*/
+#home {
+  margin-top: 100px;
+}
+
+.section-title {
+  font-size: x-large;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*--------------------------------------------------*/
+/* ---------------- Paper Published --------------- */
+/*--------------------------------------------------*/
+
+#papers {
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr 1fr;
+  grid-template-rows: 0.2fr 1.95fr 1.95fr 1.95fr 1.95fr;
+  grid-template-areas:
+    "papers-title papers-title papers-title"
+    "paper-2 paper-1 paper-1"
+    "paper-3 paper-1 paper-1"
+    "paper-4 paper-1 paper-1"
+    "paper-5 paper-1 paper-1";
+  gap: 1rem;
+  margin-top: 100px;
+}
+
+#papers h1 {
+  grid-area: papers-title;
+}
+
+.paper-1 {
+  grid-area: paper-1;
+}
+
+.paper-2 {
+  grid-area: paper-2;
+}
+
+.paper-3 {
+  grid-area: paper-3;
+}
+
+.paper-4 {
+  grid-area: paper-4;
+}
+
+.paper-5 {
+  grid-area: paper-5;
+}
+
+.paper-wrapper {
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.paper-wrapper:hover {
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.paper-1.paper-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "paper-img paper-details";
+  gap: 1rem;
+}
+
+.paper-details {
+  display: none;
+}
+
+.paper-1 .paper-img-wrapper {
+  display: block;
+  grid-area: paper-img;
+}
+
+.paper-1 .paper-sub-title {
+  display: none;
+}
+
+.paper-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.paper-1 .paper-img {
+  height: 100%;
+  object-fit: fill;
+}
+
+.paper-sub-title {
+  font-size: medium;
+  margin-top: 8px;
+}
+
+.paper-1 .paper-details {
+  display: block;
+  grid-area: paper-details;
+}
+
+.paper-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.paper-title {
+  font-size: x-larger;
+  margin: 16px 0px;
+}
+
+.paper-desc{
+  font-size: medium;
+}
+
+.paper-btns{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 12px 0px;
+}
+
+.btn {
+  display: block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: var(--color-primary-dark);
+  color: white;
+  border: none;
+  text-align: center;
+  margin: auto;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: var(--color-primary-light);
+  color: black;
+}
+
+.paper-publish-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 12px 0px;
+}
+.calendar-icon-wrapper{
+  margin-right: 12px;
+  padding-top: 4px;
+}
+.calendar-icon{
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+}
