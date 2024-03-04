@@ -79,8 +79,38 @@ nav {
 /*--------------------------------------------------*/
 /* ---------------- Profile Summary --------------- */
 /*--------------------------------------------------*/
+main {
+  margin-top: 80px;
+  padding: 0px 160px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "summary summary dp"
+    "a-title a-title a-title"
+    "a-img abt-me abt-me"
+    "releases releases releases"
+    "papers papers papers"
+    "hobbies hobbies hobbies"
+    "gallery gallery gallery"
+    "blogs blogs blogs";
+  gap: 1rem;
+}
+
 #home {
-  margin-top: 100px;
+  grid-area: summary;
+}
+.profile-picture-wrapper {
+  grid-area: dp;
+}
+.about-me-title {
+  grid-area: a-title;
+}
+.about-me-img-wrapper {
+  grid-area: a-img;
+}
+.about-me-details {
+  grid-area: abt-me;
 }
 
 .section-title {
@@ -95,6 +125,7 @@ nav {
 
 #releases {
   display: grid;
+  grid-area: releases;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: "papers nobels patents";
@@ -137,6 +168,7 @@ nav {
 
 #papers {
   display: grid;
+  grid-area: papers;
   grid-template-columns: 0.6fr 1.4fr 1fr;
   grid-template-rows: 0.2fr 1.95fr 1.95fr 1.95fr 1.95fr;
   grid-template-areas:
@@ -286,6 +318,7 @@ nav {
 /*--------------------------------------------------*/
 #hobbies {
   display: grid;
+  grid-area: hobbies;
   grid-template-columns: 0.8fr 0.2fr;
   grid-template-rows: 0.2fr 1.8fr;
   grid-template-areas:
@@ -361,4 +394,80 @@ nav {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
+}
+
+/*--------------------------------------------------*/
+/* -------------------Blogs---------------------- */
+/*--------------------------------------------------*/
+#gallery {
+  grid-area: gallery;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: .2f 3f 1fr 1fr 1fr;
+  grid-template-areas: "g-title g-title g-title g-title g-title g-title"
+  "g-sub-title g-sub-title gallery-1 gallery-1 gallery-1 gallery-1"
+  "gallery-2 gallery-3 gallery-4 gallery-5 gallery-6 gallery-7"
+  "gallery-8 gallery-9 gallery-10 gallery-11 gallery-12 gallery-13";
+  gap: 1rem;
+}
+.gallery-title{
+  grid-area: g-title;
+}
+
+.gallery-sub-title{
+  grid-area: g-sub-title;
+}
+.gallery-1 {
+  grid-area: gallery-1;
+  height: 600px;
+  border: 1px solid red;
+}
+.gallery-2 {
+  grid-area: gallery-2;
+}
+.gallery-3 {
+  grid-area: gallery-3;
+}
+.gallery-4 {
+  grid-area: gallery-4;
+}
+.gallery-5 {
+  grid-area: gallery-5;
+}
+.gallery-6 {
+  grid-area: gallery-6;
+}
+.gallery-7 {
+  grid-area: gallery-7;
+}
+.gallery-8 {
+  grid-area: gallery-8;
+}
+.gallery-9 {
+  grid-area: gallery-9;
+}
+.gallery-10 {
+  grid-area: gallery-10;
+}
+.gallery-11 {
+  grid-area: gallery-11;
+}
+.gallery-12 {
+  grid-area: gallery-12;
+}
+.gallery-13 {
+  grid-area: gallery-13;
+}
+
+.gallery-wrapper .gallery-img-desc{
+  display: none;
+}
+.gallery-wrapper.gallery-1 .gallery-img-desc{
+  display: block;
+}
+/*--------------------------------------------------*/
+/* -------------------Blogs---------------------- */
+/*--------------------------------------------------*/
+#blogs {
+  grid-area: blogs;
 }
