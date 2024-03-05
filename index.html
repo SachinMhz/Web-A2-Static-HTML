@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Albert Einstien - Portfolio</title>
     <link rel="stylesheet" href="sytle.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
     <nav>
       <div class="mobile-nav">
@@ -21,48 +26,54 @@
       </ul>
     </nav>
     <main>
-      <section id="home" class="summary">
-        <h1 class="summary-title">ALBERT EINSTEIN</h1>
-        <h2 class="summary-sub-title">Physicist, Scientist</h2>
-        <p class="summary-description">
-          "Imagination is more important than knowledge."
-        </p>
+      <section id="home">
+        <section class="summary">
+          <h1 class="summary-title">ALBERT EINSTEIN</h1>
+          <h2 class="summary-sub-title">Physicist, Scientist</h2>
+          <p class="summary-description">
+            <span class="material-icons"> format_quote </span>
+            Imagination is more important than knowledge.
+            <span class="material-icons"> format_quote </span>
+          </p>
+        </section>
+        <section class="profile-picture-wrapper">
+          <img
+            class="profile-picture"
+            src="./images/model.jpg"
+            alt="Profile Picture"
+          />
+        </section>
       </section>
-      <section class="profile-picture-wrapper">
-        <img
-          class="profile-picture"
-          src="./images/model.png"
-          alt="Profile Picture"
-        />
+      <section id="about" class="container">
+        <h1 class="section-title about-me-title">About Me</h1>
+        <section class="about-me-img-wrapper">
+          <img
+            class="about-me-img"
+            src="./images/abt-albert.jpeg"
+            alt="Albert Einstien's Photo - About me."
+          />
+        </section>
+        <section class="about-me-details">
+          <h1 class="summary-title">Who is Albert Einstein?</h1>
+          <p class="about-me-desc">
+            Lorem ipsum dolor sit amet, cons ectetur adipis icing elit, sed do
+            eius mod tempor incid idunt ut labore et dolore magna aliq ua. Lorem
+            ipsum dolor sit amet, cons ectetur adipis icing elit, sed do eius
+            mod tempor incid idunt ut labore et dolore magna aliq ua. Lorem
+            ipsum dolor sit amet, consectetur adi
+          </p>
+          <br />
+          <p class="about-me-desc">
+            Lorem ipsum dolor sit amet, cons ectetur adipis icing elit, sed do
+            eius mod tempor incid idunt ut labore et dolore magna aliq ua. Lorem
+            ipsum dolor sit amet, cons ectetur adipis icing elit, sed do eius
+            mod tempor incid idunt ut labore et dolore magna aliq ua. Lorem
+            ipsum dolor sit amet, consectetur adi
+          </p>
+          <button class="btn read-more-btn">Read More</button>
+        </section>
       </section>
-      <h1 id="about-me" class="section-title about-me-title">About Me</h1>
-      <section class="about-me-img-wrapper">
-        <img
-          class="about-me-img"
-          src="./images/about-me.png"
-          alt="Albert Einstien's Photo - About me."
-        />
-      </section>
-      <section class="about-me-details">
-        <h1 class="summary-title">Who is Albert Einstein?</h1>
-        <p class="about-me-desc">
-          Lorem ipsum dolor sit amet, cons ectetur adipis icing elit, sed do
-          eius mod tempor incid idunt ut labore et dolore magna aliq ua. Lorem
-          ipsum dolor sit amet, cons ectetur adipis icing elit, sed do eius mod
-          tempor incid idunt ut labore et dolore magna aliq ua. Lorem ipsum
-          dolor sit amet, consectetur adi
-        </p>
-        <br />
-        <p class="about-me-desc">
-          Lorem ipsum dolor sit amet, cons ectetur adipis icing elit, sed do
-          eius mod tempor incid idunt ut labore et dolore magna aliq ua. Lorem
-          ipsum dolor sit amet, cons ectetur adipis icing elit, sed do eius mod
-          tempor incid idunt ut labore et dolore magna aliq ua. Lorem ipsum
-          dolor sit amet, consectetur adi
-        </p>
-        <button class="btn read-more-btn">Read More</button>
-      </section>
-      <section id="releases">
+      <section id="releases" class="container">
         <div class="scientific-paper">
           <p class="release-count">300+</p>
           <h2 class="release-heading">Scientific Papers</h2>
@@ -76,7 +87,7 @@
           <h2 class="release-heading">Patents</h2>
         </div>
       </section>
-      <section id="papers">
+      <section id="papers" class="container">
         <h1 class="section-title papers-title">Papers</h1>
         <div class="paper-wrapper paper-1">
           <div class="paper-img-wrapper">
@@ -267,7 +278,7 @@
           </div>
         </div>
       </section>
-      <section id="hobbies">
+      <section id="hobbies" class="container">
         <h1 class="section-title hobbies-title">Hobbies</h1>
         <div class="hobbies-wrapper">
           <div class="hobby-1 hobby-wrapper">
@@ -356,7 +367,7 @@
           <p class="hobby-count-label">Albert's Leisure Pursuits</p>
         </div>
       </section>
-      <section id="gallery" class="educations">
+      <section id="gallery" class="container">
         <h1 class="gallery-title section-title">Photo Gallery</h1>
         <div class="gallery-wrapper gallery-1">
           <img
@@ -443,114 +454,161 @@
           />
         </div>
       </section>
-      <section id="blogs" class="blogs">
-        <h1 class="blogs-title">Blogs</h1>
+      <section id="blogs" class="container">
+        <h1 class="blogs-title section-title">Blogs</h1>
         <div class="blog-1 blog-wrapper">
-          <h2 class="blog-title">Mastering Data Structures</h2>
           <div class="blog-img-wrapper">
             <img
               class="blog-img"
-              src="images/data-structure.jpg"
+              src="images/paper-3.jpg"
               alt="Image of blog"
             />
-            <p class="blog-detail">
+          </div>
+          <div class="blog-details">
+            <h2 class="blog-title">Mastering Data Structures</h2>
+            <p class="blog-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur...
+              enim ad minim veniam, quis nostrud...
             </p>
+
             <div class="blog-footer">
-              <button class="blog-btn">Read More</button>
+              <button class="btn blog-btn">Read More</button>
               <p class="blog-date">Feburary 20, 2023</p>
             </div>
           </div>
         </div>
         <div class="blog-2 blog-wrapper">
-          <h2 class="blog-title">Building Web Applications</h2>
           <div class="blog-img-wrapper">
             <img
               class="blog-img"
-              src="images/task-project.jpg"
+              src="images/paper-3.jpg"
               alt="Image of blog"
             />
-            <p class="blog-detail">
+          </div>
+          <div class="blog-details">
+            <h2 class="blog-title">Mastering Data Structures</h2>
+            <p class="blog-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur...
+              enim ad minim veniam, quis nostrud...
             </p>
+
             <div class="blog-footer">
-              <button class="blog-btn">Read More</button>
+              <button class="btn blog-btn">Read More</button>
+              <p class="blog-date">Feburary 20, 2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="blog-3 blog-wrapper">
+          <div class="blog-img-wrapper">
+            <img
+              class="blog-img"
+              src="images/paper-3.jpg"
+              alt="Image of blog"
+            />
+          </div>
+          <div class="blog-details">
+            <h2 class="blog-title">Mastering Data Structures</h2>
+            <p class="blog-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud...
+            </p>
+
+            <div class="blog-footer">
+              <button class="btn blog-btn">Read More</button>
+              <p class="blog-date">Feburary 20, 2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="blog-4 blog-wrapper">
+          <div class="blog-img-wrapper">
+            <img
+              class="blog-img"
+              src="images/paper-3.jpg"
+              alt="Image of blog"
+            />
+          </div>
+          <div class="blog-details">
+            <h2 class="blog-title">Mastering Data Structures</h2>
+            <p class="blog-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud...
+            </p>
+
+            <div class="blog-footer">
+              <button class="btn blog-btn">Read More</button>
               <p class="blog-date">Feburary 20, 2023</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="testimonials">
-        <h1 class="testimonials-title">Testimonials</h1>
-        <div class="testimonial-1">
-          <div class="testimonial">
+      <section id="testimonials" class="container">
+        <h1 class="testimonials-title section-title">Testimonials</h1>
+        <div class="testimonial-1 testimonial">
+          <p class="testimonial-message">
+            <span class="material-icons"> format_quote </span>
+            Scelerisque in dictum non consectetur a erat nam at. Vitae auctor eu
+            augue ut lectus arcu bibendum at. Imperdiet massa tincidunt nunc
+            pulvinar.
+            <span class="material-icons"> format_quote </span>
+          </p>
+          <div class="testimonial-img-wrapper">
             <img
               class="testimonial-img"
               src="images/user-1.png"
               alt="Image of blog"
             />
+          </div>
+          <div class="testimonial-user">
             <p class="testimonial-user">Kyle N Almanza</p>
             <p class="testimonial-level">Developer</p>
-            <p class="testimonial-message">
-              Scelerisque in dictum non consectetur a erat nam at. Vitae auctor
-              eu augue ut lectus arcu bibendum at. Imperdiet massa tincidunt
-              nunc pulvinar sapien et ligula ullamcorper. Feugiat sed lectus
-              vestibulum mattis. Sollicitudin ac orci phasellus egestas tellus.
-            </p>
           </div>
-        </div>
-        <div class="testimonial-2">
-          <div class="testimonial">
+        </div>  <div class="testimonial-2 testimonial">
+          <p class="testimonial-message">
+            <span class="material-icons"> format_quote </span>
+            Scelerisque in dictum non consectetur a erat nam at. Vitae auctor eu
+            augue ut lectus arcu bibendum at. Imperdiet massa tincidunt nunc
+            pulvinar.
+            <span class="material-icons"> format_quote </span>
+          </p>
+          <div class="testimonial-img-wrapper">
             <img
               class="testimonial-img"
-              src="images/user-2.png"
+              src="images/user-1.png"
               alt="Image of blog"
             />
-            <p class="testimonial-user">Timothy E Piper</p>
-            <p class="testimonial-level">Production Worker</p>
-            <p class="testimonial-message">
-              Scelerisque in dictum non consectetur a erat nam at. Vitae auctor
-              eu augue ut lectus arcu bibendum at. Imperdiet massa tincidunt
-              nunc pulvinar sapien et ligula ullamcorper. Feugiat sed lectus
-              vestibulum mattis. Sollicitudin ac orci phasellus egestas tellus.
-            </p>
           </div>
-        </div>
-        <div class="testimonial-3">
-          <div class="testimonial">
+          <div class="testimonial-user">
+            <p class="testimonial-user">Kyle N Almanza</p>
+            <p class="testimonial-level">Developer</p>
+          </div>
+        </div>  <div class="testimonial-3 testimonial">
+          <p class="testimonial-message">
+            <span class="material-icons"> format_quote </span>
+            Scelerisque in dictum non consectetur a erat nam at. Vitae auctor eu
+            augue ut lectus arcu bibendum at. Imperdiet massa tincidunt nunc
+            pulvinar.
+            <span class="material-icons"> format_quote </span>
+          </p>
+          <div class="testimonial-img-wrapper">
             <img
               class="testimonial-img"
-              src="images/user-3.png"
+              src="images/user-1.png"
               alt="Image of blog"
             />
-            <p class="testimonial-user">Samuel M Dolce</p>
-            <p class="testimonial-level">Gaming Supervisor</p>
-            <p class="testimonial-message">
-              Scelerisque in dictum non consectetur a erat nam at. Vitae auctor
-              eu augue ut lectus arcu bibendum at. Imperdiet massa tincidunt
-              nunc pulvinar sapien et ligula ullamcorper. Feugiat sed lectus
-              vestibulum mattis. Sollicitudin ac orci phasellus egestas tellus.
-            </p>
+          </div>
+          <div class="testimonial-user">
+            <p class="testimonial-user">Kyle N Almanza</p>
+            <p class="testimonial-level">Developer</p>
           </div>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="container">
       <div class="footer-title">
         <h2>Portfolio</h2>
         <p class="footer-desc">

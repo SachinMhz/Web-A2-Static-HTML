@@ -1,7 +1,7 @@
 :root {
   --color-primary-light: #13a6b3;
   --color-primary: #174175;
-  --color-primary-dark: #0b2d57;
+  --color-primary-dark: #000;
 }
 
 * {
@@ -10,16 +10,9 @@
 }
 
 .container {
-  margin: auto;
-  padding: 20px 120px;
+  margin: 0px;
+  padding: 0px 160px;
 }
-
-/* Remove this later */
-img {
-  width: 100px;
-  height: 100px;
-}
-
 /*--------------------------------------------------*/
 /* ---------------- Navigation Menu --------------- */
 /*--------------------------------------------------*/
@@ -28,11 +21,12 @@ nav {
   overflow: hidden;
   top: 0;
   width: 100%;
+  font-size: 16px;
 }
 
 .nav-list {
   list-style-type: none;
-  background-color: var(--color-primary-dark);
+  background-color: #282525;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,43 +74,96 @@ nav {
 /* ---------------- Profile Summary --------------- */
 /*--------------------------------------------------*/
 main {
-  margin-top: 80px;
-  padding: 0px 160px;
+  margin-top: 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "summary summary dp"
-    "a-title a-title a-title"
-    "a-img abt-me abt-me"
-    "releases releases releases"
-    "papers papers papers"
-    "hobbies hobbies hobbies"
-    "gallery gallery gallery"
-    "blogs blogs blogs";
+    "summary"
+    "about"
+    "releases"
+    "papers"
+    "hobbies"
+    "gallery"
+    "blogs"
+    "testimonials";
   gap: 1rem;
 }
 
 #home {
+  padding: 60px 0px;
   grid-area: summary;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--color-primary-dark);
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.summary-title {
+  font-size: 44px;
+  text-align: center;
+}
+.summary-sub-title {
+  font-size: 32px;
+  text-align: center;
+  margin: 24px 0px;
+}
+
+.summary-description {
+  font-style: italic;
+  text-align: center;
+  font-size: 20px;
+}
+
 .profile-picture-wrapper {
   grid-area: dp;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary-dark);
 }
-.about-me-title {
-  grid-area: a-title;
-}
-.about-me-img-wrapper {
-  grid-area: a-img;
-}
-.about-me-details {
-  grid-area: abt-me;
+
+.profile-picture {
+  height: 64vh;
 }
 
 .section-title {
-  font-size: x-large;
+  font-size: xx-large;
   text-transform: uppercase;
   text-align: center;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-top: 20px;
+}
+
+/*--------------------------------------------------*/
+/* ---------------- About-------------------------- */
+/*--------------------------------------------------*/
+#about {
+  grid-area: about;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "about-title about-title"
+    "about-img about-details";
+}
+.about-me-title {
+  grid-area: about-title;
+}
+
+.about-me-img-wrapper {
+  grid-area: about-img;
+}
+.about-me-img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.about-me-details {
+  grid-area: about-details;
+  margin-left: 24px;
 }
 
 /*--------------------------------------------------*/
@@ -139,9 +186,11 @@ main {
 .nobel-nomination {
   grid-area: nobels;
 }
+
 .patent {
   grid-area: patents;
 }
+
 #releases div {
   display: flex;
   flex-direction: column;
@@ -153,15 +202,18 @@ main {
   background-color: black;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
+
 .release-count {
   font-size: 48px;
   font-weight: bold;
 }
+
 .release-heading {
   margin-top: 8px;
   font-size: 28px;
   font-weight: bold;
 }
+
 /*--------------------------------------------------*/
 /* ---------------- Paper Published --------------- */
 /*--------------------------------------------------*/
@@ -287,7 +339,6 @@ main {
   color: white;
   border: none;
   text-align: center;
-  margin: auto;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -304,10 +355,12 @@ main {
   justify-content: left;
   margin: 12px 0px;
 }
+
 .calendar-icon-wrapper {
   margin-right: 12px;
   padding-top: 4px;
 }
+
 .calendar-icon {
   width: 32px;
   height: 32px;
@@ -341,11 +394,12 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 2rem;
+  gap: 1rem;
   border: 1px solid black;
   border-radius: 48px;
   padding: 16px;
 }
+
 .hobby-wrapper {
   display: flex;
   flex-direction: column;
@@ -355,16 +409,17 @@ main {
 }
 
 .hobby-icon-wrapper {
-  border-radius: 60px;
+  border-radius: 52px;
   border: 2px solid black;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 8px;
 }
+
 .hobby-icon {
   width: 48px;
   height: 48px;
@@ -379,11 +434,11 @@ main {
 }
 
 .hobby-count {
-  font-size: 120px;
+  font-size: 100px;
   font-weight: bold;
-  width: 120px;
-  height: 120px;
-  line-height: 120px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
   text-align: center;
   padding: 12px;
   border: 3px solid black;
@@ -414,54 +469,70 @@ main {
     "gallery-11 gallery-11 gallery-12 gallery-12";
   gap: 0.5rem;
 }
+
 .gallery-title {
   grid-area: g-title;
 }
+
 .gallery-sub-title {
   grid-area: g-sub-title;
 }
+
 .gallery-1 {
   grid-area: gallery-1;
 }
+
 .gallery-2 {
   grid-area: gallery-2;
 }
+
 .gallery-3 {
   grid-area: gallery-3;
 }
+
 .gallery-4 {
   grid-area: gallery-4;
 }
+
 .gallery-5 {
   grid-area: gallery-5;
 }
+
 .gallery-6 {
   grid-area: gallery-6;
 }
+
 .gallery-7 {
   grid-area: gallery-7;
 }
+
 .gallery-8 {
   grid-area: gallery-8;
 }
+
 .gallery-9 {
   grid-area: gallery-9;
 }
+
 .gallery-10 {
   grid-area: gallery-10;
 }
+
 .gallery-11 {
   grid-area: gallery-11;
 }
+
 .gallery-12 {
   grid-area: gallery-12;
 }
+
 .gallery-img {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
-.gallery-wrapper{
+
+.gallery-wrapper {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -476,5 +547,221 @@ main {
 /* -------------------Blogs---------------------- */
 /*--------------------------------------------------*/
 #blogs {
+  display: grid;
   grid-area: blogs;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  grid-template-areas:
+    "blogs-title blogs-title blogs-title blogs-title"
+    "blog-1 blog-2 blog-3 blog-4";
+  gap: 0.75rem;
+}
+
+.blogs-title {
+  grid-area: blogs-title;
+}
+
+.blog-1 {
+  grid-area: blog-1;
+}
+
+.blog-2 {
+  grid-area: blog-2;
+}
+
+.blog-3 {
+  grid-area: blog-3;
+}
+
+.blog-4 {
+  grid-area: blog-4;
+}
+
+.blog-wrapper {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.blog-wrapper:hover {
+  cursor: pointer;
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.blog-details {
+  padding: 16px;
+}
+
+.blog-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.blog-title {
+  text-align: left;
+  text-transform: capitalize;
+  font-size: large;
+  margin-bottom: 12px;
+}
+
+.blog-footer {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-date {
+  text-align: end;
+  font-size: small;
+  font-style: italic;
+  margin-top: 12px;
+}
+
+/*--------------------------------------------------*/
+/* -------------------Testimonials----------------- */
+/*--------------------------------------------------*/
+#testimonials {
+  grid-area: testimonials;
+  display: grid;
+  grid-template-areas:
+    "t-title t-title t-title"
+    "testimonial-1 testimonial-2 testimonial-3";
+  gap: 1rem;
+  margin-bottom: 60px;
+}
+.testimonials-title {
+  grid-area: t-title;
+}
+
+.testimonial {
+  display: grid;
+  grid-template-columns: .2fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "t-message t-message t-message t-message"
+    "t-img t-user t-user t-user";
+  gap: 1rem;
+  background-color: #403d3d;
+  color:#fff;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 16px;
+}
+.testimonial-message {
+  grid-area: t-message;
+  line-height: 28px;
+}
+.testimonial-img-wrapper {
+  grid-area: t-img;
+  align-items: end;
+  justify-content: end;
+}
+.testimonial-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+.testimonial-user {
+  padding-top: 4px;
+  grid-area: t-user;
+}
+
+/*--------------------------------------------------*/
+/* -------------------Testimonials----------------- */
+/*--------------------------------------------------*/
+
+
+
+footer.container{
+  display: grid;
+  grid-template-columns: 3fr 1.2fr 1.2fr 0.6fr;
+  grid-template-rows: 1.5fr .5fr;
+  grid-template-areas:
+    "f-title f-project f-blog f-company"
+    "f-social f-project f-blog f-company";
+  margin-top: 20px;
+  gap: 0.5rem;
+  background-color: var(--color-primary-dark);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: white;
+}
+
+.footer-title {
+  grid-area: f-title;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.footer-social {
+  grid-area: f-social;
+  text-align: left;
+}
+
+.social-icon {
+  height: 24px;
+  width: 24px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 1px 1px 2px rgba(98, 97, 97, 0.4);
+}
+
+.social-icon:hover {
+  box-shadow: 4px 4px 8px rgba(98, 97, 97, 0.4);
+  cursor: pointer;
+}
+
+.socials-wrapper {
+  list-style-type: none;
+  height: 36px;
+}
+
+.socials-wrapper li {
+  display: inline-block;
+  margin: 8px;
+}
+
+.footer-projects {
+  grid-area: f-project;
+}
+
+.footer-blogs {
+  grid-area: f-blog;
+}
+
+.footer-company {
+  grid-area: f-company;
+}
+
+.footer-desc {
+  margin: 16px 0px;
+  padding-right: 32px;
+}
+
+.footer-right-list {
+  display: inline-block;
+  margin-top: 0px;
+  height: 132px;
+  vertical-align: bottom;
+}
+
+.footer-right-title {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.footer-list {
+  margin-right: 12px;
+  list-style-type: none;
+}
+
+.footer-list-item {
+  margin-top: 8px;
+}
+
+.footer-list-item:hover {
+  color: var(--color-primary-light);
+  cursor: pointer;
 }
