@@ -146,8 +146,8 @@ main {
   display: grid;
   gap: 1rem;
   grid-template-areas:
-    "about-title about-title"
-    "about-img about-details";
+    "about-title about-title about-title"
+    "about-img about-img about-details";
 }
 .about-me-title {
   grid-area: about-title;
@@ -164,6 +164,14 @@ main {
 .about-me-details {
   grid-area: about-details;
   margin-left: 24px;
+}
+.about-me-desc{
+  margin-top: 8px;
+}
+.read-more-btn{
+  margin: auto;
+  margin-top: 20px;
+  width: 40%;
 }
 
 /*--------------------------------------------------*/
@@ -295,7 +303,8 @@ main {
 
 .paper-1 .paper-img {
   height: 100%;
-  object-fit: fill;
+  width: 100%;
+  object-fit: cover;
 }
 
 .paper-sub-title {
@@ -322,6 +331,7 @@ main {
 
 .paper-desc {
   font-size: medium;
+  margin-top: 8px;
 }
 
 .paper-btns {
