@@ -165,10 +165,10 @@ main {
   grid-area: about-details;
   margin-left: 24px;
 }
-.about-me-desc{
+.about-me-desc {
   margin-top: 8px;
 }
-.read-more-btn{
+.read-more-btn {
   margin: auto;
   margin-top: 20px;
   width: 40%;
@@ -230,13 +230,12 @@ main {
   display: grid;
   grid-area: papers;
   grid-template-columns: 0.6fr 1.4fr 1fr;
-  grid-template-rows: 0.2fr 1.95fr 1.95fr 1.95fr 1.95fr;
+  grid-template-rows: 0.2fr 1.95fr 1.95fr 1.95fr;
   grid-template-areas:
     "papers-title papers-title papers-title"
     "paper-2 paper-1 paper-1"
     "paper-3 paper-1 paper-1"
-    "paper-4 paper-1 paper-1"
-    "paper-5 paper-1 paper-1";
+    "paper-4 paper-1 paper-1";
   gap: 1rem;
 }
 
@@ -405,9 +404,9 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
-  border: 1px solid black;
   border-radius: 48px;
   padding: 16px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .hobby-wrapper {
@@ -418,22 +417,13 @@ main {
   text-align: center;
 }
 
-.hobby-icon-wrapper {
+.hobby-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
   border-radius: 52px;
   border: 2px solid black;
-  height: 80px;
-  width: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.hobby-icon {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
+  margin-bottom: 4px;
 }
 
 .hobbies-count-wrapper {
@@ -446,13 +436,13 @@ main {
 .hobby-count {
   font-size: 100px;
   font-weight: bold;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
   text-align: center;
   padding: 12px;
-  border: 3px solid black;
   border-radius: 100px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .hobby-count-label {
@@ -648,13 +638,13 @@ main {
 
 .testimonial {
   display: grid;
-  grid-template-columns: .2fr 1fr 1fr 1fr;
+  grid-template-columns: 0.2fr 1fr 1fr 1fr;
   grid-template-areas:
     "t-message t-message t-message t-message"
     "t-img t-user t-user t-user";
   gap: 1rem;
   background-color: #403d3d;
-  color:#fff;
+  color: #fff;
   border-radius: 16px;
   overflow: hidden;
   padding: 16px;
@@ -677,17 +667,20 @@ main {
   padding-top: 4px;
   grid-area: t-user;
 }
+.testimonial-level{
+  margin-top: 4px;
+  font-size: small;
+  font-style: italic;
+}
 
 /*--------------------------------------------------*/
 /* -------------------Testimonials----------------- */
 /*--------------------------------------------------*/
 
-
-
-footer.container{
+footer.container {
   display: grid;
   grid-template-columns: 3fr 1.2fr 1.2fr 0.6fr;
-  grid-template-rows: 1.5fr .5fr;
+  grid-template-rows: 1.5fr 0.5fr;
   grid-template-areas:
     "f-title f-project f-blog f-company"
     "f-social f-project f-blog f-company";
