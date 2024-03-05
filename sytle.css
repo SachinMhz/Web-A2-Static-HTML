@@ -1,7 +1,7 @@
 :root {
-  --color-primary-light: #13a6b3;
-  --color-primary: #174175;
+  --color-gray: #282525;
   --color-primary-dark: #000;
+  --color-primary-light: #760303;
 }
 
 * {
@@ -26,7 +26,7 @@ nav {
 
 .nav-list {
   list-style-type: none;
-  background-color: #282525;
+  background-color: var(--color-gray);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -354,8 +354,7 @@ main {
 .btn:hover {
   cursor: pointer;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
-  background-color: var(--color-primary-light);
-  color: black;
+  background-color: var(--color-gray);
 }
 
 .paper-publish-wrapper {
@@ -539,7 +538,7 @@ main {
 .gallery-wrapper:hover {
   cursor: pointer;
   box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.4);
-  border-radius: 16px;
+  scale: 1.1;
   overflow: hidden;
 }
 
@@ -643,7 +642,7 @@ main {
     "t-message t-message t-message t-message"
     "t-img t-user t-user t-user";
   gap: 1rem;
-  background-color: #403d3d;
+  background-color: var(--color-gray);
   color: #fff;
   border-radius: 16px;
   overflow: hidden;
