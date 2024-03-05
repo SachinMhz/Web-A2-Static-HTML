@@ -482,7 +482,7 @@ main {
     "gallery-8 gallery-8 gallery-7 gallery-7"
     "gallery-8 gallery-8 gallery-9 gallery-10"
     "gallery-11 gallery-11 gallery-12 gallery-12";
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .gallery-title {
