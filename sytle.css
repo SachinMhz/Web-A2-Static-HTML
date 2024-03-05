@@ -13,6 +13,7 @@
   margin: 0px;
   padding: 0px 160px;
 }
+
 /*--------------------------------------------------*/
 /* ---------------- Navigation Menu --------------- */
 /*--------------------------------------------------*/
@@ -49,25 +50,19 @@ nav {
   display: none;
   justify-items: flex-end;
   align-items: flex-end;
-  padding: 12px;
-  background-color: var(--color-primary-dark);
+  padding: 16px;
+  padding-left: 36px;
+  background-color: var(--color-gray);
+  color: #fff;
 }
 
 .nav-list.display-flex {
   display: flex;
 }
 
-.nav-menu {
-  width: 32px;
-  height: 32px;
-  padding: 2px;
-}
-
 .nav-menu:hover {
   cursor: pointer;
-  width: 36px;
-  height: 36px;
-  padding: 0px;
+  color: var(--color-primary-light);
 }
 
 /*--------------------------------------------------*/
@@ -91,20 +86,28 @@ main {
 }
 
 #home {
-  padding: 60px 0px;
+  padding: 60px 160px;
   grid-area: summary;
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "summary dp";
   align-items: center;
   background-color: var(--color-primary-dark);
   color: #fff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.summary {
+  grid-area: summary;
+}
+
 .summary-title {
   font-size: 44px;
   text-align: center;
 }
+
 .summary-sub-title {
   font-size: 32px;
   text-align: center;
@@ -149,25 +152,35 @@ main {
     "about-title about-title about-title"
     "about-img about-img about-details";
 }
+
 .about-me-title {
   grid-area: about-title;
+}
+
+.about-title {
+  font-size: 44px;
+  margin-bottom: 16px;
 }
 
 .about-me-img-wrapper {
   grid-area: about-img;
 }
+
 .about-me-img {
   width: 100%;
-  aspect-ratio: 1;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-me-details {
   grid-area: about-details;
   margin-left: 24px;
 }
+
 .about-me-desc {
   margin-top: 8px;
 }
+
 .read-more-btn {
   margin: auto;
   margin-top: 20px;
@@ -336,8 +349,11 @@ main {
 .paper-btns {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   margin: 12px 0px;
+}
+
+.read-btn {
+  margin-left: 12px;
 }
 
 .btn {
@@ -631,6 +647,7 @@ main {
   gap: 1rem;
   margin-bottom: 60px;
 }
+
 .testimonials-title {
   grid-area: t-title;
 }
@@ -648,25 +665,30 @@ main {
   overflow: hidden;
   padding: 16px;
 }
+
 .testimonial-message {
   grid-area: t-message;
   line-height: 28px;
 }
+
 .testimonial-img-wrapper {
   grid-area: t-img;
   align-items: end;
   justify-content: end;
 }
+
 .testimonial-img {
   width: 60px;
   height: 60px;
   border-radius: 30px;
 }
+
 .testimonial-user {
   padding-top: 4px;
   grid-area: t-user;
 }
-.testimonial-level{
+
+.testimonial-level {
   margin-top: 4px;
   font-size: small;
   font-style: italic;
@@ -679,7 +701,7 @@ main {
 footer.container {
   display: grid;
   grid-template-columns: 3fr 1.2fr 1.2fr 0.6fr;
-  grid-template-rows: 1.5fr 0.5fr;
+  grid-template-rows: 1.75fr 0.25fr;
   grid-template-areas:
     "f-title f-project f-blog f-company"
     "f-social f-project f-blog f-company";
@@ -766,4 +788,370 @@ footer.container {
 .footer-list-item:hover {
   color: var(--color-primary-light);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1300px) {
+  #about {
+    grid-template-areas:
+      "about-title about-title "
+      "about-img about-details ";
+  }
+
+  .keywords-wrapper {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 0px 120px;
+  }
+
+  #home {
+    padding: 60px 120px;
+  }
+
+  .profile-picture {
+    height: 52vh;
+  }
+
+  .summary-title {
+    font-size: 36px;
+  }
+
+  .summary-sub-title {
+    font-size: 28px;
+  }
+
+  .summary-description {
+    font-size: 16px;
+  }
+
+  .release-count {
+    font-size: 44px;
+  }
+
+  .release-heading {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .about-title {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  #papers {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.8fr 1fr 1fr;
+    grid-template-areas:
+      "papers-title papers-title papers-title"
+      "paper-1 paper-1 paper-1"
+      "paper-1 paper-1 paper-1"
+      "paper-2 paper-3 paper-4";
+  }
+
+  #blogs {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.5fr;
+    grid-template-areas:
+      "blogs-title blogs-title"
+      "blog-1 blog-2"
+      "blog-3 blog-4";
+    gap: 1rem;
+  }
+
+  .blog-img {
+    height: 260px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .nav-list li {
+    padding: 16px 20px;
+  }
+
+  .container {
+    padding: 0px 100px;
+  }
+
+  #home {
+    padding: 60px 100px;
+  }
+
+  #releases div {
+    padding: 12px;
+  }
+
+  #hobbies {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "h-title"
+      "h-wrapper";
+    gap: 1rem;
+  }
+
+  .hobbies-count-wrapper {
+    display: none;
+  }
+
+  #testimonials {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "t-title"
+      "testimonial-1"
+      "testimonial-2"
+      "testimonial-3";
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .profile-picture {
+    height: 40vh;
+  }
+
+  #papers {
+    grid-template-rows: 0.2fr 1.8fr 1fr 0.5fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-list li {
+    padding: 16px 12px;
+  }
+
+  .container {
+    padding: 0px 60px;
+  }
+
+  #home {
+    padding: 60px 60px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-top: 12px;
+  }
+
+  .summary-title {
+    font-size: 24px;
+  }
+
+  .summary-sub-title {
+    font-size: 24px;
+  }
+
+  .summary-description {
+    font-size: 14px;
+  }
+
+  .about-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .about-me-desc {
+    font-size: small;
+    margin-top: 4px;
+  }
+
+  #releases {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "papers papers"
+      "nobels patents";
+  }
+
+  #papers {
+    grid-template-rows: 0.2fr 1.8fr 1fr 0.5fr;
+  }
+
+  .paper-1.paper-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "paper-img"
+      "paper-details";
+    gap: 1rem;
+  }
+
+  .paper-desc-2 {
+    display: none;
+  }
+
+  .hobbies-wrapper {
+    gap: 0.5rem;
+    border-radius: 20px;
+    padding: 12px;
+  }
+
+  .hobby-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  #blogs {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "blogs-title"
+      "blog-1"
+      "blog-2"
+      "blog-3"
+      "blog-4";
+    gap: 1rem;
+  }
+
+  .blog-img {
+    height: 320px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-list li {
+    padding: 12px 48px;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .container {
+    padding: 0px 36px;
+  }
+
+  #home {
+    padding: 30px 36px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "dp"
+      "summary";
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-top: 12px;
+  }
+
+  .summary-title {
+    font-size: 28px;
+  }
+
+  .summary-sub-title {
+    font-size: 20px;
+  }
+
+  .profile-picture {
+    height: 32vh;
+  }
+
+  #about {
+    gap: 1rem;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "about-title"
+      "about-img"
+      "about-details";
+  }
+
+  .about-title {
+    font-size: 24px;
+  }
+
+  .about-me-details {
+    margin-left: 0px;
+  }
+
+  #releases {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "papers"
+      "nobels"
+      "patents";
+  }
+
+  #papers {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "papers-title"
+      "paper-1"
+      "paper-1"
+      "paper-2"
+      "paper-3"
+      "paper-4";
+  }
+
+  .hobbies-wrapper {
+    gap: 1rem;
+    border-radius: 20px;
+    padding: 12px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .hobby-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  #gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "g-title g-title"
+      "gallery-1 gallery-2"
+      "gallery-3 gallery-4"
+      "gallery-5 gallery-6"
+      "gallery-7 gallery-8"
+      "gallery-9 gallery-10"
+      "gallery-11 gallery-12";
+    gap: 0.5rem;
+  }
+
+  footer.container {
+    padding: 24px 40px;
+    gap: 0rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.1fr auto auto auto;
+    grid-template-areas:
+      "f-title"
+      "f-social"
+      "f-project"
+      "f-blog"
+      "f-company";
+    grid-gap: 1rem;
+  }
+
+  footer .socials-wrapper {
+    justify-content: start;
+  }
+
+  .footer-desc {
+    margin-bottom: 0px;
+  }
+
+  .footer-title {
+    margin-bottom: 0px;
+  }
+
+  .footer-right-title {
+    font-size: 16px;
+  }
+
+  .footer-list-item {
+    font-size: 14px;
+  }
 }
